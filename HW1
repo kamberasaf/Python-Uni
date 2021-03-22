@@ -52,11 +52,12 @@ def taylor_appx(x, n):
 
 # Question 3:
 
-def play_with_strings(string):
+def play_with_strings(given_string):
     upper_case = []
     lower_case = []
     num = 0
-    list_of_words = string.split()  # Will create a list of words from a given string.
+    list_of_words = given_string.split()  # Will create a list of words from a given string.
+
     for i in range(len(list_of_words)):
         if i % 2:
             lower_case.append(list_of_words[num].lower())  # Adds the word as lowercase to the lowercase list.
@@ -65,7 +66,7 @@ def play_with_strings(string):
             upper_case.append(list_of_words[num].upper())  # Does the same for the uppercase list.
             num += 1
 
-    upper_case.sort()  # This will sort uppercase as ascending order.
+    upper_case.sort()  # This will sort uppercase in ascending order.
     lower_case.sort(reverse=True)  # This will sort descending order for lowercase
     print(*upper_case, *lower_case)
     exit()
