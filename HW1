@@ -8,7 +8,7 @@ def vowels(word):
         if 65 <= ord(i) < 97 or 98 <= ord(i) <= 100 or 102 <= ord(i) <= 104 or \
                 106 <= ord(i) <= 110 or 112 <= ord(i) <= 116 or 118 <= ord(i) <= 120 or ord(i) == 121:
             not_vowels_letters += 1
-            
+
     print(not_vowels_letters)
     exit()
 
@@ -59,7 +59,7 @@ def play_with_strings(string):
     upper_case = []
     lower_case = []
     num = 0
-    list_of_words = string.split()  # Will separate the words on the string.
+    list_of_words = string.split()  # Will create a list of words from a given string.
     for i in range(len(list_of_words)):
         if i % 2:
             lower_case.append(list_of_words[num].lower())  # Adds the word as lowercase to the lowercase list.
@@ -88,7 +88,7 @@ def lychrel_numb(x):
     num_of_iterations = 0
 
     while not is_palindromic:
-        if str(x) == str(x)[::-1]:
+        if str(x) == str(x)[::-1]:  # Checks if a number is palindromic.
             print(num_of_iterations)
             break
 
@@ -122,24 +122,24 @@ while True:
     except ValueError:
         print("error")
         exit()
-        
+
     if select == 1:
         word = input("\nEnter a word: ")
         vowels(word)
-        
+
     elif select == 2:
         number1 = float(input('\nPlease select a first number: '))
         number2 = float(input('\nPlease select a second number: '))
         taylor_appx(number1, number2)
-        
+
     elif select == 3:
         string = input('\nPlease enter a string: ')
         play_with_strings(string)
-        
+
     elif select == 4:
         numb = int(input('\nPlease select a number: '))
         lychrel_numb(numb)
-        
+
     else:
         print("error")
         exit()
