@@ -20,7 +20,7 @@ def vowels(word):
 # Question 2:
 
 def valid_input(x, n):
-    # Function checks if inputs are numbers, abs(x)<=0.7 and n>=0.
+    # This function checks if inputs are numbers, abs(x)<=0.7 and n>=0.
     if type(x) != float and type(x) != int:
         return False
     elif type(n) != int:
@@ -34,7 +34,7 @@ def valid_input(x, n):
 
 
 def taylor_appx(x, n):
-    # Taylor approximation of ln(1+x) of order n.
+    # Taylor  series approximation of ln(1+x) of order n.
     # if input is invalid, prints 'error'.
     if not valid_input(x, n):
         print('error')
