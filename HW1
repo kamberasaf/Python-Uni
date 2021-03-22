@@ -22,12 +22,8 @@ def vowels(word):
 # Question 2:
 
 def valid_input(x, n):
-    # This function checks if inputs are numbers, abs(x)<=0.7 and n>=0.
-    if type(x) != float and type(x) != int:
-        return False
-    elif type(n) != int:
-        return False
-    elif not -0.7 <= x <= 0.7:
+    # This function checks abs(x)<=0.7 and n>=0.
+    if not -0.7 <= x <= 0.7:
         return False
     elif not 0 <= n:
         return False
@@ -36,7 +32,7 @@ def valid_input(x, n):
 
 
 def taylor_appx(x, n):
-    # Taylor  series approximation of ln(1+x) up to order n.
+    # Taylor  series approximation of ln(1+x) of order n.
     # if input is invalid, prints 'error'.
     if not valid_input(x, n):
         print('error')
@@ -129,8 +125,14 @@ while True:
         vowels(word)
 
     elif select == 2:
-        number1 = float(input('\nPlease select a first number: '))
-        number2 = float(input('\nPlease select a second number: '))
+        number1 = input('\nPlease select a first number: ')
+        number2 = input('\nPlease select a second number: ')
+        try:
+            number1 = float(number1)
+            number2 = int(number2)
+        except ValueError:
+            print('error')
+            exit()
         taylor_appx(number1, number2)
 
     elif select == 3:
