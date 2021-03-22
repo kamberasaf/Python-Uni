@@ -8,6 +8,7 @@ def vowels(word):
         if 65 <= ord(i) < 97 or 98 <= ord(i) <= 100 or 102 <= ord(i) <= 104 or \
                 106 <= ord(i) <= 110 or 112 <= ord(i) <= 116 or 118 <= ord(i) <= 120 or ord(i) == 121:
             not_vowels_letters += 1
+            
     print(not_vowels_letters)
     exit()
 
@@ -121,19 +122,24 @@ while True:
     except ValueError:
         print("error")
         exit()
+        
     if select == 1:
         word = input("\nEnter a word: ")
         vowels(word)
+        
     elif select == 2:
         number1 = float(input('\nPlease select a first number: '))
         number2 = float(input('\nPlease select a second number: '))
         taylor_appx(number1, number2)
+        
     elif select == 3:
         string = input('\nPlease enter a string: ')
         play_with_strings(string)
+        
     elif select == 4:
         numb = int(input('\nPlease select a number: '))
         lychrel_numb(numb)
+        
     else:
         print("error")
         exit()
