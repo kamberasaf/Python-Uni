@@ -36,7 +36,7 @@ def valid_input(x, n):
 
 
 def taylor_appx(x, n):
-    # Taylor  series approximation of ln(1+x) of order n.
+    # Taylor  series approximation of ln(1+x) up to order n.
     # if input is invalid, prints 'error'.
     if not valid_input(x, n):
         print('error')
