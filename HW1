@@ -20,8 +20,8 @@ def vowels(word):
 # Question 2:
 
 def valid_input(x, n):
-    # Function checks if inputs are numbers, abs(x)<=0.7 and n>0.
-    if type(x) != float:
+    # Function checks if inputs are numbers, abs(x)<=0.7 and n>=0.
+    if type(x) != float and type(x) != int:
         return False
     elif type(n) != int:
         return False
@@ -49,7 +49,7 @@ def taylor_appx(x, n):
 
 
 # This is to test Q2 only.
-# taylor_appx(0.3, 0)
+# taylor_appx(0.2,10)
 
 
 # Question 3:
@@ -115,6 +115,7 @@ while True:
     (3) Playing with strings.
     (4) Lychrel Numbers.
     ''')
+
     try:
         select = int(select)
     except ValueError:
