@@ -1,13 +1,12 @@
 # Question 1:
 
-def vowels(word):
+def vowels(sentence):
     # This will count letters in a given word that are A-Z
     # or a-z minus case vowels ['a','e','i','o','u','y'].
     not_vowels_letters = 0
 
-    for i in word:
-        if 65 <= ord(i) < 97 or 98 <= ord(i) <= 100 or 102 <= ord(i) <= 104 or \
-                106 <= ord(i) <= 110 or 112 <= ord(i) <= 116 or 118 <= ord(i) <= 120 or ord(i) == 122:
+    for i in sentence:
+        if 65 <= ord(i) <= 122 and ord(i) not in [97, 101, 105, 111, 117, 121]:
             not_vowels_letters += 1
 
     print(not_vowels_letters)
@@ -106,14 +105,14 @@ def lychrel_numb(x):
 # lychrel_numb(196)
 
 
-while True:
+def welcome_menu():
     select = input('''
-    Please select a number:
     (1) Vowels.
     (2) Taylor Approximation.
     (3) Playing with strings.
     (4) Lychrel Numbers.
-    ''')
+
+    Please select a number: ''')
 
     try:
         select = int(select)
@@ -147,3 +146,6 @@ while True:
     else:
         print("error")
         exit()
+
+if __name__ == '__main__':
+    welcome_menu()
