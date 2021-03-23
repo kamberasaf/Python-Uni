@@ -21,10 +21,12 @@ def vowels(sentence):
 # Question 2:
 
 def valid_input(x, n):
-    # This function checks abs(x)<=0.7 and n>=0.
-    if not -0.7 <= x <= 0.7:
+    # This function checks n is an integer, abs(x)<=0.7 and n>=0.
+    if not n.is_integer():
         return False
-    elif not 0 <= n:
+    elif not -0.7 <= x <= 0.7:
+        return False
+    elif not -0 <= n:
         return False
 
     return True
@@ -129,7 +131,7 @@ def welcome_menu():
         number2 = input('\nPlease select a second number: ')
         try:
             number1 = float(number1)
-            number2 = int(number2)
+            number2 = float(number2)
         except ValueError:
             print('error')
             exit()
