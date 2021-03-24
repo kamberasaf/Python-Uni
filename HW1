@@ -57,7 +57,7 @@ def play_with_strings(given_string):
     upper_case = []
     lower_case = []
     num = 0
-    list_of_words = given_string.split()  # Will create a list of words from a given string.
+    list_of_words = given_string.split()  # This will create a list of words from a given string.
 
     for i in range(len(list_of_words)):
         if i % 2:
