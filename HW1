@@ -6,7 +6,7 @@ def vowels(sentence):
     not_vowels_letters = 0
 
     for i in sentence:
-        if 65 <= ord(i) <= 122 and ord(i) not in [97, 101, 105, 111, 117, 121]:
+        if (65 <= ord(i) <= 90 or 97 <= ord(i) <= 122) and ord(i) not in [97, 101, 105, 111, 117, 121]:
             not_vowels_letters += 1
 
     return not_vowels_letters
