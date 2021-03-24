@@ -9,8 +9,7 @@ def vowels(sentence):
         if 65 <= ord(i) <= 122 and ord(i) not in [97, 101, 105, 111, 117, 121]:
             not_vowels_letters += 1
 
-    print(not_vowels_letters)
-    exit()
+    return not_vowels_letters
 
 
 # This is to test Q1 only.
@@ -57,7 +56,7 @@ def play_with_strings(given_string):
     upper_case = []
     lower_case = []
     num = 0
-    list_of_words = given_string.split()  # This will create a list of words from a given string.
+    list_of_words = given_string.split()  # Will create a list of words from a given string.
 
     for i in range(len(list_of_words)):
         if i % 2:
@@ -124,7 +123,8 @@ def welcome_menu():
 
     if select == 1:
         word = input("\nEnter a word: ")
-        vowels(word)
+        print(vowels(word))
+        exit()
 
     elif select == 2:
         number1 = input('\nPlease select a first number: ')
