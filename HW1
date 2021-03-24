@@ -96,7 +96,7 @@ def lychrel_numb(x):
             is_palindromic = True
 
         else:
-            x_rev = int(str(x)[::-1])  # This will reverse the digits on the given x.
+            x_rev = int(str(x)[::-1])  # This will reverse the digits on a given x.
             x += x_rev
             num_of_iterations += 1
 
@@ -111,7 +111,7 @@ def welcome_menu():
     select = input('''
     (1) Vowels.
     (2) Taylor Approximation.
-    (3) Playing with strings.
+    (3) Playing with Strings.
     (4) Lychrel Numbers.
 
     Please select a number: ''')
